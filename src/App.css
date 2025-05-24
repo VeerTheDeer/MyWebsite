@@ -104,3 +104,78 @@
 .read-the-docs {
   color: #888;
 }
+
+/* Container for the Cosmos page content */
+.cosmos-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Main title styling */
+.cosmos-page h1 {
+  font-size: 2.5em;  /* Make the title large for emphasis (visual hierarchy) */
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+/* Intro paragraph below title */
+.cosmos-intro {
+  font-size: 1.2em;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+/* General section layout: side-by-side on wide screens */
+.cosmos-section {
+  display: flex;
+  align-items: center;
+  gap: 2rem;               /* space between image and text */
+  margin: 3rem 0;          /* space around each section (whitespace for separation) */
+}
+.cosmos-section .cosmos-text, 
+.cosmos-section .cosmos-image {
+  flex: 1 1 50%;           /* each takes about half the container width */
+}
+
+/* Ensure images scale nicely within their flex container */
+.cosmos-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+/* Section text styling */
+.cosmos-text h2 {
+  font-size: 1.8em;        /* Section heading slightly smaller than main title */
+  margin-bottom: 0.5em;
+}
+.cosmos-text p {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Optional: Add subtle alternating background colors to sections for clarity */
+.cosmos-section:nth-of-type(even) {
+  background: #f9f9f9;    /* light gray background for every second section */
+  padding: 2rem 1rem;
+  border-radius: 8px;
+}
+
+/* Responsive design: stack sections vertically on narrow screens */
+@media (max-width: 768px) {
+  .cosmos-section {
+    flex-direction: column;
+    text-align: center;   /* center text on small screens for symmetry */
+  }
+  .cosmos-section .cosmos-text, 
+  .cosmos-section .cosmos-image {
+    flex: 1 1 100%;      /* each element full width on mobile */
+  }
+  .cosmos-section .cosmos-image {
+    margin: 1rem 0;      /* space images from text on mobile */
+  }
+}

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Routes, Route, BrowserRouter, NavLink } from 'react-router-dom';
 import './App.css';
 import meadow from './assets/meadow.png';
+import CosmosPage from './CosmosPage';  // import the new page component
 
 const HomePage = () => {
     const [listItems, setListItems] = useState([
@@ -109,17 +110,15 @@ const App = () => (
         <nav className="navbar">
         <ul>
             <li><NavLink to="/" >Home</NavLink></li>
-          
-        
-       
-        
             <li><NavLink to="/things-to-read">Things to Read</NavLink></li>
-          </ul>
+            <li><NavLink to="/cosmos">The Cosmos</NavLink></li>
+        </ul>
           
         </nav>
         <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/things-to-read" element={<ThingsToRead />} />
+            <Route path="/cosmos" element={<CosmosPage />} />
         </Routes>
     </BrowserRouter>
 );
