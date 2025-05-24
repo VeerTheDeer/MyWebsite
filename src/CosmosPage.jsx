@@ -1,8 +1,8 @@
 import React from 'react';
 // Import the images (adjust paths as needed for your project structure)
-import starfieldImg from './assets/1140x641.jpg';              // starfield nebula image
-import galaxyImg from './assets/NGC_4414_(NASA-med).jpeg';     // spiral galaxy image
-import solarSystemImg from './assets/Solar_System_true_color.jpeg'; // solar system image
+import starfieldImg from './assets/starfield.jpg';              // starfield nebula image
+import galaxyImg from './assets/galaxy.jpg';     // spiral galaxy image
+import solarSystemImg from './assets/ss.jpg'; // solar system image
 
 function CosmosPage() {
   return (
